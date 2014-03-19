@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='my-car'>
 <head>
     <title>my-car app</title>
     <meta charset="utf-8" />
 </head>
 <body>
-  <p>This is my car</p>
+  <p>Please choose your car</p>
+  <div ng-controller='CarselectionCtrl'>
+    <select ng-model='carMaker' ng-options='o as o for o in carMakers' ng-change='makerChange()'>
+      <option value="">Please choose your car maker</option>
+    </select>    
+    <select ng-model='carModel' ng-options='o as o for o in carModels'>
+      <option value="">Please choose your car model</option>
+    </select>
+  </div>
   <script src="bower_components/angular/angular.min.js"></script>
-  <script src="app/js/main.js"></script>
+  <script src="app/js/car-selection-controller.js"></script>
+  <script src="app/js/car-selection-service.js"></script>
 </body>
 </html>
