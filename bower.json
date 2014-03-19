@@ -1,0 +1,19 @@
+{
+  "name": "my-car",
+  "version": "0.0.0",
+  "authors": [
+    "zhewuzhou"
+  ],
+  "dependencies": {
+    "angular": "1.2.14"
+  },
+  "description": "for practice",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
