@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html ng-app='my-car'>
-<head>
+  <head>
     <title>my-car app</title>
     <meta charset="utf-8" />
-</head>
-<body>
-  <p>Please choose your car</p>
-  <div ng-controller='CarselectionCtrl'>
-    <select ng-model='carMaker' ng-options='o as o for o in carMakers' ng-change='makerChange()'>
-      <option value="">Please choose your car maker</option>
-    </select>    
-    <select ng-model='carModel' ng-options='o as o for o in carModels'>
-      <option value="">Please choose your car model</option>
-    </select>
-  </div>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="app/js/car-selection-controller.js"></script>
-  <script src="app/js/car-selection-service.js"></script>
-</body>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+  </head>
+  <body>
+    <p>Please choose your car</p>
+    <div ng-controller='CarselectionCtrl'>
+      <div>
+        <select ng-model='carMaker' ng-options='o as o for o in carMakers' ng-change='makerChange()' class='form-control'>
+          <option value="">Please choose your car maker</option>
+        </select>    
+      </div>
+      <div>
+        <select ng-model='carModel' ng-options='o as o for o in carModels' class='form-control'>
+          <option value="">Please choose your car model</option>
+        </select>
+      </div>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app/js/car-selection-controller.js"></script>
+    <script src="app/js/car-selection-service.js"></script>
+  </body>
 </html>
