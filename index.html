@@ -14,7 +14,7 @@
         </select>    
       </div>
       <div>
-        <select ng-model='carModel' ng-options='o as o for o in carModels' class='form-control'>
+        <select ng-disabled='isCarModelDisable()' ng-model='carModel' ng-options='o as o for o in carModels' class='form-control'>
           <option value="">Please choose your car model</option>
         </select>
       </div>

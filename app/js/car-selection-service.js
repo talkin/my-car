@@ -1,7 +1,7 @@
-angular.module('my-car').factory('CarSelectionService', [function(){
+angular.module('my-car').factory('CarSelectionService', ['$http', function($http){
   return {
     getCarMakers: function() {
-      return ['Audi', 'BMW', 'Benz'];
+      return $http.get('/makers');
     },
     getCarModels: function(carMaker) {
       if(carMaker === 'Audi') {

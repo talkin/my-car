@@ -1,10 +1,12 @@
 var myCar = angular.module('my-car', []);
 
 myCar.controller('CarselectionCtrl', ['CarSelectionService', '$scope',  function(CarSelectionService, $scope){
-  $scope.carMakers = CarSelectionService.getCarMakers();
+  CarSelectionService.getCarMakers().then(function(res){
+    $scope.carMakers = res.data;
+  })
 
   $scope.isCarModelDisable = function(){
-    return $scope.carMaker !== undefined;
+    return $scope.carMaker === "" || $scope.carMaker === undefined;
   }
 
   $scope.makerChange = function() {
